@@ -1,0 +1,7 @@
+#!/bin/bash
+
+BASEDIR=$(dirname $0)/..
+CNF_DIR=$BASEDIR/cnf
+
+for f in `find $CNF_DIR -name '*.cnf.gz'`; do gzip -dkf $f& done
+wait
